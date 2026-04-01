@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --background: 0.97 0.01 70;
+    --foreground: 0.22 0.03 30;
+    --card: 1.0 0 0;
+    --card-foreground: 0.22 0.03 30;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.22 0.03 30;
+    --primary: 0.62 0.13 15;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.73 0.07 145;
+    --secondary-foreground: 0.22 0.05 145;
+    --muted: 0.93 0.012 70;
+    --muted-foreground: 0.55 0.03 40;
+    --accent: 0.9 0.04 30;
+    --accent-foreground: 0.35 0.08 15;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.015 60;
+    --input: 0.88 0.015 60;
+    --ring: 0.62 0.13 15;
+    --chart-1: 0.62 0.13 15;
+    --chart-2: 0.73 0.07 145;
+    --chart-3: 0.75 0.1 55;
+    --chart-4: 0.65 0.1 300;
+    --chart-5: 0.7 0.12 200;
+    --sidebar: 0.98 0.008 70;
+    --sidebar-foreground: 0.22 0.03 30;
+    --sidebar-primary: 0.62 0.13 15;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.93 0.012 70;
+    --sidebar-accent-foreground: 0.22 0.03 30;
+    --sidebar-border: 0.88 0.015 60;
+    --sidebar-ring: 0.62 0.13 15;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+  .font-sans {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .rose-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.97 0.015 30) 0%,
+      oklch(0.94 0.025 15) 50%,
+      oklch(0.97 0.01 70) 100%
+    );
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 24px oklch(0.62 0.13 15 / 0.08), 0 1px 4px
+      oklch(0 0 0 / 0.04);
+  }
+}
